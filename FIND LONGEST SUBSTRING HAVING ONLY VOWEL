@@ -1,0 +1,27 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		String s = "abcaiebcae";
+		int n = s.length();
+		int maxlen = 0;
+		int currlen = 0;
+		
+		for(int i=0; i<n; i++){
+		    char chars = s.charAt(i);
+		    if (chars == 'a' ||chars == 'e'|| chars == 'i' ||chars == 'o' ||chars == 'u' ){
+		        currlen++;
+		        maxlen = Math.max(maxlen,currlen);
+		    }
+		    else {
+		        currlen = 0;
+		    }
+		    
+		}
+        System.out.println(maxlen);
+	}
+}
